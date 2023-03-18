@@ -3,6 +3,7 @@ import SideMenu from "../SideMenu/sideMenu";
 import Maps from "./map";
 import UserProfile from "./userProfile";
 import CompanyProfile from "./companyProfile";
+import Address from "./address"
 export default function Profile() {
   const userValue = JSON.parse(localStorage.getItem("userData"));
   return (
@@ -11,6 +12,7 @@ export default function Profile() {
       <SideMenu />
       <UserProfile userValue={userValue} />
       <CompanyProfile userValue={userValue} />
+      <Address userValue={userValue}/>
       <div>
         <Maps userValue={userValue} />
         <p>
