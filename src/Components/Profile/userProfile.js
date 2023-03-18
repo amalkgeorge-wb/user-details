@@ -2,10 +2,10 @@ export default function UserProfile(props) {
   const { profilepicture, name, username, email, phone, website } =
     props?.userValue;
   return (
-    <div>
-      <div>
-        <img src={profilepicture} alt="profile" />
-        <h3>{name}</h3>
+    <div className="user-data">
+      <div className="avatar-head">
+        <img className="avatar" src={profilepicture} alt="profile" />
+        <h4 className="mt-2 user-name">{name}</h4>
       </div>
       <div>
         <ul>

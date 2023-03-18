@@ -24,10 +24,10 @@ export default function SideMenu() {
     },
   ];
   return (
-    <div>
-      <ul>
+    <div className="sidebar d-flex align-items-center justify-content-center">
+      <ul className="menu-items">
         {sideMenu.map((menuItem)=>(
-            <li key={menuItem?.value} onClick={()=>navigate(menuItem?.url)}>{menuItem?.label}</li>
+            <li className="menu-lists" key={menuItem?.value} onClick={()=>navigate(menuItem?.url)}>{menuItem?.label}</li>
         ))}
       </ul>
     </div>
