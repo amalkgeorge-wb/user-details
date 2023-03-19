@@ -4,11 +4,11 @@ export default function Posts(props) {
   return (
     <div className="container">
       <div className="d-flex  mt-5">
-        <SideMenu selected={"posts"}/>
+        <SideMenu selected={"posts"} />
         <div className="head">
-          <Header title={"Posts"} setRenderDetails={props?.setRenderDetails}/>
+          <Header title={"Posts"} setRenderDetails={props?.setRenderDetails} />
           <div className="coming-soon">
-              <h1 className="coming-text">coming soon</h1>
+            <h1 className="coming-text">coming soon</h1>
           </div>
         </div>
       </div>

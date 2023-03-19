@@ -6,15 +6,13 @@ const containerStyle = {
   height: "250px",
 };
 
-
-
 export default function Maps(props) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
   });
   const center = {
-    lat: parseFloat(props?.userValue?.address?.geo?.lat) ,
+    lat: parseFloat(props?.userValue?.address?.geo?.lat),
     lng: parseFloat(props?.userValue?.address?.geo?.lng),
   };
   const [map, setMap] = React.useState(null);
@@ -35,7 +33,6 @@ export default function Maps(props) {
       zoom={8}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
       <>
         <Marker position={center} onClick={handleMarkerClick} />
       </>
