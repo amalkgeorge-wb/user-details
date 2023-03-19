@@ -9,14 +9,15 @@ import ToDo from "./Components/ToDo";
 import { createContext, useState } from "react";
 const MyContext = createContext()
 function App() {
+  const [renderDetails,setRenderDetails]= useState(null)
   return (
     <div className="App">
       <Routes>
       <Route path="/" element={<Home/> } />
-      <Route path="profile" element={<Profile /> } />
-      <Route path="gallery" element={<Gallery /> } />
-      <Route path="posts" element={<Posts /> } />
-      <Route path="todo" element={<ToDo /> } />
+      <Route path="profile" element={<Profile renderDetails={renderDetails} setRenderDetails={setRenderDetails}/> } />
+      <Route path="gallery" element={<Gallery setRenderDetails={setRenderDetails}/> } />
+      <Route path="posts" element={<Posts setRenderDetails={setRenderDetails}/> } />
+      <Route path="todo" element={<ToDo setRenderDetails={setRenderDetails}/> } />
       </Routes>
     </div>
   );

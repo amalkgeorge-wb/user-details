@@ -8,6 +8,7 @@ export function Home(props){
         .then(data => {
           // handle the data returned from the API
           setUserData(data);
+          localStorage.setItem('myData',  JSON.stringify(data))
         })
         .catch(error => {
           // handle any errors that occurred
@@ -18,10 +19,12 @@ export function Home(props){
     return(
         <div className='home-screen'>
             <img  src="../images/wave.svg"/>
+            <div className="users-container">
             <Users 
             userData={userData}
             setUserDetails={props?.setUserDetails}
             />
+            </div>
         </div>
     )
 }
