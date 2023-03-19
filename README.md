@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Google Api Key
+You will need a google api key for the map
+
+## Packages Installed
+Bootstrap, material ui, react router dom, react google maps 
+You will need to npm i before running the file
 ### `npm start`
 
 Runs the app in the development mode.\
