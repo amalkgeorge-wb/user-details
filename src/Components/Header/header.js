@@ -71,9 +71,12 @@ export default function Header(props) {
               localStorage.setItem("userData", JSON.stringify(item));
             }}
           >
-            <div className="menu-users">
+            <div className="menu-users d-flex">
+              <img className="avatar" src= {item?.profilepicture} alt="avatar"/>
+              <div>
               <h6 className="u-name">{item?.name}</h6>
               <p className="u-email">{item?.email}</p>
+              </div>
             </div>
           </MenuItem>
         ))}
